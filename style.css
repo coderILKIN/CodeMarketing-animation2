@@ -1,134 +1,106 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.qalaktika{
-    width: 1100px;
-    margin: 0px auto;
-    position: relative;
+.qalaktika {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./galaxy_andromeda_2152.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
 }
 
-.yer{
-    width: 400px;
-    height: 400px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-    left: 300px;
-    top: 150px;
-    
+.sun {
+  position: relative;
 }
 
-.merkuru{
-    width: 100px;
-    height: 100px;
-    background-color: green;
-    border-radius: 50%;
-    position: absolute;
-    left: 500px;
-    top: 20px;
-    animation: merkur 3s linear infinite;
+.sunn img {
+  animation: sun 18s infinite linear;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
-.saturun{
-    width: 100px;
-    height: 100px;
-    background-color: orange;
-    border-radius: 50%;
-    position: absolute;
-    right: 250px;
-    top: 200px;
-    animation: saturun 3s linear infinite;
+.merkuru {
+  animation: merkur 20s infinite linear;
+  position: absolute;
+  top: 90px;
+  left: 700px;
+  bottom: 60px;
+  right: 700px;
 }
 
-.uran{
-    width: 100px;
-    height: 100px;
-    background-color:blue;
-    border-radius: 50%;
-    position: absolute;
-    left: 200px;
-    top: 150px;
-    animation: uran 3s linear infinite;
+.merkuru img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
-
-@keyframes merkur{
-    0%{
-       
-        transform:translateX(0px) translateY(0px);
-    }
-
-    25%{
-        
-        
-        transform:translateX(280px) translateY(40vh);
-    }
-
-    50%{
-        transform:translateX(30px) translateY(80vh);
-    }
-    
-    75%{
-        transform:translateX(-390px) translateY(40vh);
-    }
-    
-    100%{
-        transform:translateX(0px) translateY(0px);
-    }
+.mars {
+  animation: merkur 20s infinite linear;
+  position: absolute;
+  top: 30px;
+  left: 760px;
+  bottom: 120px;
+  right: 640px;
 }
 
-
-@keyframes saturun{
-    0%{
-       
-        transform:translateX(0px) translateY(0px);
-    }
-
-    25%{
-        
-        
-        transform:translateX(-100px) translateY(61vh);
-    }
-
-    50%{
-        transform:translateX(-680px) translateY(10vh);
-    }
-    
-    75%{
-        transform:translateX(6px) translateY(-40vh);
-    }
-    
-    100%{
-        transform:translateX(0px) translateY(0px);
-    }
+.mars img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
-@keyframes uran{
-    0%{
-       
-        transform:translateX(0px) translateY(0px);
-    }
+.saturun {
+  animation: merkur 15s infinite linear;
+  position: absolute;
+  top: 200px;
+  left: 750px;
+  bottom: 200px;
+  right: 720px;
+}
 
-    25%{
-        
-        
-        transform:translateX(350px) translateY(-25vh);
-    }
+.saturun img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
 
-    50%{
-        transform:translateX(620px) translateY(60vh);
-    }
+@keyframes merkur {
+  0% {
+    transform: translateX(360px);
+    transform: rotateZ(0deg);
+  }
 
+  100% {
+    transform: translateX(360px);
+    transform: rotateZ(360deg);
+  }
+}
 
-    
-    75%{
-        transform:translateX(30px) translateY(70vh);
-    }
-    
-    100%{
-        transform:translateX(0px) translateY(0px);
-    }
+@keyframes saturun {
+  0% {
+    transform: translateX(360px);
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: translateX(360px);
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes sun {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
